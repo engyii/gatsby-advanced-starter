@@ -1,5 +1,5 @@
 module.exports = {
-  blogPostDir: "sample-posts", // The name of directory that contains your posts.
+  blogPostDir: "fake-music-blog", // The name of directory that contains your posts.
   siteTitle: "Gatsby Advanced Starter", // Site title.
   siteTitleAlt: "GatsbyJS Advanced Starter", // Alternative site title for SEO.
   siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
@@ -30,7 +30,7 @@ module.exports = {
       iconClassName: "fa fa-globe"
     }
   ],
-  copyright: "Copyright © 2017. Geogaddi", // Copyright string for the footer of the website and RSS feed.
+  copyright: "Copyright © 2017 Website Name", // Copyright string for the footer of the website and RSS feed.
   themeColor: "#c62828", // Used for setting manifest and progress theme colors.
   backgroundColor: "#e0e0e0" // Used for setting manifest background color.
 };

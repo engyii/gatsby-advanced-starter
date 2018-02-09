@@ -11,6 +11,7 @@ class PostListing extends React.Component {
         cover: postEdge.node.frontmatter.cover,
         title: postEdge.node.frontmatter.title,
         date: postEdge.node.frontmatter.date,
+        dateModified: postEdge.node.frontmatter.dateModified,
         excerpt: postEdge.node.excerpt,
         timeToRead: postEdge.node.timeToRead
       });
@@ -23,10 +24,13 @@ class PostListing extends React.Component {
       <div>
         {/* Your post list here. */
         postList.map(post => (
-          <div>
-          <Link to={post.path} key={post.title}>
-            <h1>{post.title}</h1>
-          </Link>
+          <div itemscope itemtype="http://schema.org/CreativeWork">
+            <Link to={post.path} key={post.title}>
+              <h1 itemprop="name">{post.title}</h1>
+            </Link>
+            <div itemprop="headline">{post.excerpt}</div>
+            <time itemprop="datePublished" datetime="{post.date}">{Intl.DateTimeFormat('en-US', {})}</time>
+            <time itemprop="dateModified" datetime="{post.dateModified}"></time>
           </div>
         ))}
       </div>

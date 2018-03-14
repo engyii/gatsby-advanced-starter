@@ -34,6 +34,7 @@ export const pageQuery = graphql`
           excerpt
           timeToRead
           frontmatter {
+            author
             title
             tags
             cover
